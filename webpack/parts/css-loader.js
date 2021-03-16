@@ -22,7 +22,9 @@ exports.cssLoader = () => ({
       loader: "postcss-loader",
       options: {
         // sourceMap: true,
-        postcssOptions: {plugins: [require("autoprefixer")()]},
+        postcssOptions: {
+          plugins: [require("autoprefixer")()]
+        },
       },
     },
     {
