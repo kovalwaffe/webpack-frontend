@@ -1,8 +1,6 @@
 const path = require("path");
-const webpack = require("webpack");
 const {MiniHtmlWebpackPlugin} = require("mini-html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const {mode} = require("webpack-nano/argv");
 const environment = require('./parts/enviroment');
 const {devServer} = require('./parts/devserver');
 const {cssLoader} = require('./parts/css-loader');
