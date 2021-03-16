@@ -2,8 +2,9 @@ const path = require("path");
 const {MiniHtmlWebpackPlugin} = require("mini-html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const environment = require('./parts/enviroment');
-const {devServer} = require('./parts/devserver');
+const {images} = require("./parts/images");
 const {cssLoader} = require('./parts/css-loader');
+const {devServer} = require('./parts/devserver');
 
 
 module.exports = {
@@ -18,7 +19,8 @@ module.exports = {
   ...devServer(),
   module: {
     rules: [
-      cssLoader()
+      cssLoader(),
+      images()
     ]
   },
   plugins: [
