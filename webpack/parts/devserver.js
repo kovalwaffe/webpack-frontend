@@ -1,7 +1,6 @@
-const path = require('path');
 const environment = require('./enviroment');
 
-module.exports = {
+exports.devServer = () => ({
   devServer: {
     contentBase: environment.paths.output, // if you dont generate index.html you must indicate folder
     compress: true,
@@ -19,5 +18,5 @@ module.exports = {
       poll: 1000, // Poll using interval (in ms or a boolean)
       ignored: /node_modules/, // Ignore to decrease CPU usage
     },
-  },
-}
+  }
+});

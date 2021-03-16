@@ -1,6 +1,6 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-module.exports = {
+exports.cssLoader = () => ({
   test: /\.((c|sa|sc)ss)$/i,
   sideEffects: true, // need for tree-shaking
   use: [
@@ -11,7 +11,7 @@ module.exports = {
       // }
     },
     {
-      loader: "css-loader",
+      loader: "css-loader", // goes through possible @import and url()
       // options: {
       //   url: false,
       //   sourceMap: true,
@@ -30,4 +30,5 @@ module.exports = {
       // options: {sourceMap: true}
     }
   ]
-}
+});
+

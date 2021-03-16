@@ -4,8 +4,8 @@ const {MiniHtmlWebpackPlugin} = require("mini-html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // const {mode} = require("webpack-nano/argv");
 const environment = require('./parts/enviroment');
-const devServer = require('./parts/devserver');
-const cssLoader = require('./parts/css-loader')
+const {devServer} = require('./parts/devserver');
+const {cssLoader} = require('./parts/css-loader');
 
 
 module.exports = {
@@ -17,10 +17,10 @@ module.exports = {
     path: environment.paths.output, // Output to dist directory
     filename: "js/[name].js", // Emit app.js by capturing entry name
   },
-  ...devServer,
+  ...devServer(),
   module: {
     rules: [
-      {...cssLoader}
+      cssLoader()
     ]
   },
   plugins: [
