@@ -10,6 +10,7 @@ const {devServer} = require('./parts/devserver');
 
 module.exports = {
   mode: 'development',
+  devtool: 'cheap-module-source-map' ,
   target: 'web', // only for develomplent
   entry: {
     app: path.resolve(environment.paths.source, 'js', 'app.js'),
