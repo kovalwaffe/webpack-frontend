@@ -38,3 +38,7 @@ npm run build
 - [ ] Autoprefixing of browserspecific CSS rules via [postcss](https://postcss.org/) and [autoprefixer](https://github.com/postcss/autoprefixer)
 - [ ] Style Linting via [stylelint](https://stylelint.io/) 
 - [ ] JavaScript Linting via [eslint-loader](https://github.com/MoOx/eslint-loader) 
+- [ ] Building
+  - [ ] Code Spliting
+  - [ ] Spliting
+  

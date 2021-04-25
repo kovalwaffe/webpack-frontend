@@ -1,17 +1,18 @@
 const path = require("path");
-const {MiniHtmlWebpackPlugin} = require("mini-html-webpack-plugin");
+
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const environment = require('./parts/enviroment');
 const {fonts} = require("./parts/fonts");
 const {images} = require("./parts/images");
 const {cssLoader} = require('./parts/css-loader');
 const {devServer} = require('./parts/devserver');
+const {html} = require('./parts/html');
 
 
 module.exports = {
   mode: 'development',
   devtool: 'cheap-module-source-map' ,
-  target: 'web', // only for develomplent
+  target: 'web', // only for development
   entry: {
     app: path.resolve(environment.paths.source, 'js', 'app.js'),
   }, // Start bundling
@@ -31,6 +32,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
     }),
-    new MiniHtmlWebpackPlugin({context: {title: "Demo"}})
+    html()
   ],
 };
