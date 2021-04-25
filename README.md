@@ -1,5 +1,4 @@
 # Yet Another Webpack Fronted Starterkit 
-# Webpack Frontend Starterkit
 
 A smart webpack based frontend project.
 
