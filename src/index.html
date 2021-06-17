@@ -1,14 +1,42 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title><%= htmlWebpackPlugin.options.title %></title>
-</head>
-<body>
-<h1>Hello world</h1>
+<html class="no-js" lang="en">
 
+<head>
+  <meta charset="utf-8">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="apple-touch-icon" href="/icon.png">
+
+  <link rel="stylesheet" href="/normalize.css">
+
+
+  <meta name="theme-color" content="#fafafa">
+  <script src="/normalize.js"></script>
+</head>
+
+<body>
+<p>Hello world!</p>
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>window.ga = function () {
+  ga.q.push(arguments);
+};
+
+ga.q = [];
+ga.l = +new Date();
+ga('create', 'UA-XXXXX-Y', 'auto');
+ga('set', 'anonymizeIp', true);
+ga('set', 'transport', 'beacon');
+ga('send', 'pageview');</script>
+<script src="https://www.google-analytics.com/analytics.js" async=""></script>
 </body>
+
 </html>
+
